@@ -1,0 +1,45 @@
+/* Simple CSS values that are a little derivative of current effects
+    Can we modify these values from our JSX?
+*/
+.glass {
+  padding: 5px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  /* Last value dictates opacity */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /*  */
+  backdrop-filter: blur(18.3px);
+  /* This line and the bottom are provide blur effects, should be tested */
+  -webkit-backdrop-filter: blur(18.3px);
+}
+
+[data-blur="none"] {
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+}
+[data-blur="light"] {
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+[data-blur="medium"] {
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+}
+[data-blur="heavy"] {
+  backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
+}
+
+[data-trans="xlight"] {
+  background: rgba(255, 255, 255, 0.05);
+}
+[data-trans="light"] {
+  background: rgba(255, 255, 255, 0.15);
+}
+[data-trans="medium"] {
+  background: rgba(255, 255, 255, 0.25);
+}
+[data-trans="dark"] {
+  background: rgba(255, 255, 255, 0.50);
+}

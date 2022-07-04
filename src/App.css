@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background: url("./background-test.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

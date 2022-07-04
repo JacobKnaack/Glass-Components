@@ -1,41 +1,23 @@
-import React, { PropsWithChildren } from "react";
+import { SyntheticEvent } from "react";
+import { Surface } from '../Surface';
+import { FormHeading } from "./FormHeading/FormHeading";
+import { FormButton } from "./FormButton/FormButton";
+import { FormInput } from "./FormInput/FormInput";
 import './Form.css';
 
-export type GlassProps = {
-  background: string;
-  transparency: string;
-  blur: string;
-  shadow: string;
-}
-
-
-// Declaring props for component and on variable creation
-export const FormHeading: React.FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
-  return (
-    <div id="form-heading">
-      <h2>{children}</h2>
-    </div>
-  )
-}
-
-export const FormInput: React.FC = () => {
-  return (
-    <input type="text" />
-  )
-}
-
-export const FormButton: React.FC<PropsWithChildren> = () => {
-  return (
-    <button>Click Me</button>
-  )
-}
-
 export function Form() {
+
+  const handleSubmit = (e: SyntheticEvent): void => {
+    e.preventDefault();
+  }
+
   return (
-    <div id="glass-form" className="glass">
-      <FormHeading>Here is the Heading</FormHeading>
-      <FormInput />
-      <FormButton />
-    </div>
+    <Surface>
+      <form id="glass-form" onSubmit={handleSubmit}>
+        <FormHeading>Here is the Heading</FormHeading>
+        <FormInput label="label text" placeholder="placeholder text" />
+        <FormButton title="Click Me" />
+      </form>
+    </Surface>
   )
 }

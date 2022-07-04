@@ -1,0 +1,13 @@
+.glass-button {
+  width: 150px;
+  min-height: 40px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.glass-button:active {
+  background-color: grey;
+  color: white;
+}
