@@ -1,6 +1,6 @@
 import './App.css';
-import { Surface } from './Surface';
-import { Form } from './Form';
+import { Surface } from './components/Surface';
+import { Form } from './components/Form';
 
 function App() {
   return (
