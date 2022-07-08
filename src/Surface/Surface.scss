@@ -1,0 +1,52 @@
+/* Simple CSS values that are a little derivative of current effects
+    Can we modify these values from our JSX?
+*/
+.glass {
+  padding: 5px;
+  margin: 7px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18.3px);
+  /* This line and the bottom are provide blur effects, should be tested */
+  -webkit-backdrop-filter: blur(18.3px);
+}
+
+/*
+  Sass function for adding blur to background container
+  Takes values from 1 to 50
+*/
+@for $i from 0 through 50 {
+  .glass.blur_#{$i} {
+    backdrop-filter: blur(#{$i}px);
+    -webkit-backdrop-filter: blur(#{$i}px);
+  }
+}
+
+// .glass.blur_none {}
+// .glass.blur_xlight {}
+// .glass.blur_light {}
+// .glass.blur_medium {}
+// .glass.blur_full {}
+
+// 
+/*
+ Sass function for adding transparency / shadow values to glass components
+ takes values from 0 up to 1
+*/
+@for $i from 1 through 100 {
+  $value: calc($i / 100);
+  .glass.trans_#{$i} {
+    background: rgba(255, 255, 255, $value);
+  }
+
+  .glass.shade_#{$i} {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, $value);
+  }
+}
+
+// .glass.trans_none {}
+
+// .glass.shade_none {}
+
+// TODO: get rgb values from glass surface, add specific style for surfaces using those values

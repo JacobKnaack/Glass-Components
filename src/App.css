@@ -1,4 +1,5 @@
 .App {
+  min-height: 100vh;
   text-align: center;
   background: url("./background-test.jpg");
   background-size: cover;
@@ -6,11 +7,20 @@
 }
 
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demo-tile {
+  width: 50%;
 }
