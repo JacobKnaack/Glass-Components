@@ -1,6 +1,6 @@
 import './App.css';
 import { Surface } from './components/Surface';
-import { Form } from './components/Form';
+import { Form, FormButton, FormHeading, FormInput } from './components/Form';
 
 function App() {
   return (
@@ -11,7 +11,13 @@ function App() {
       <main id="demo">
         <section className="demo-tile">
           <Surface>
-            <Form />
+            <Form>
+              <FormHeading>
+                Hello App
+              </FormHeading>
+              <FormInput label="Label Me" placeholder="Type Here" />
+              <FormButton title="Click Me" />
+            </Form>
           </Surface>
         </section>
       </main>
